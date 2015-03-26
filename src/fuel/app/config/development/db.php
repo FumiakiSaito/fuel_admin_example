@@ -6,21 +6,21 @@
 return array(
 	'default' => array(
 		'connection'  => array(
-			'hostname'  => 'hoge',
+			'hostname'  => 'localhost',
 			'port'      => '3306',
-			'database'  => 'hoge',
-			'username'  => 'hoge',
-			'password'  => 'hoge',
+			'database'  => 'fuel_template',
+			'username'  => 'fuel_template',
+			'password'  => 'corosuke',
 		),
     ),
 
 	'slave1' => array(
 		'connection'  => array(
-			'hostname'  => 'hoge',
+			'hostname'  => 'localhost',
 			'port'      => '3306',
-			'database'  => 'hoge',
-			'username'  => 'hoge',
-			'password'  => 'hoge',
+			'database'  => 'fuel_template',
+			'username'  => 'fuel_template',
+			'password'  => 'corosuke',
 		),
 	),
 
