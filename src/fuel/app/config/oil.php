@@ -47,7 +47,7 @@ return array(
 		//'autoload_path' => 'PHPUnit/Autoload.php' ,
 		//'binary_path' => 'phpunit' ,
 		'autoload_path' => '' ,
-		'binary_path' => DOCROOT . 'fuel/vendor/bin/phpunit' ,
+        'binary_path' => 'fuel/vendor/phpunit/phpunit/composer/bin/phpunit',
 	),
 );
 
