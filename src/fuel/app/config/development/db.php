@@ -8,8 +8,8 @@ return array(
 		'connection'  => array(
 			'hostname'  => 'localhost',
 			'port'      => '3306',
-			'database'  => 'fuel_template',
-			'username'  => 'fuel_template',
+			'database'  => 'fuel_admin',
+			'username'  => 'fuel_admin',
 			'password'  => 'corosuke',
 		),
     ),
@@ -18,8 +18,8 @@ return array(
 		'connection'  => array(
 			'hostname'  => 'localhost',
 			'port'      => '3306',
-			'database'  => 'fuel_template',
-			'username'  => 'fuel_template',
+			'database'  => 'fuel_admin',
+			'username'  => 'fuel_admin',
 			'password'  => 'corosuke',
 		),
 	),

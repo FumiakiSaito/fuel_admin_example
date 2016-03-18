@@ -14,8 +14,8 @@ create table admin (
   , `group` INT default 1 not null comment 'グループ'
   , email VARCHAR(255) not null comment 'メールアドレス'
   , last_login VARCHAR(25) not null comment '最終ログイン'
-  , login_hash VARCHAR(255) not null comment 'ログインハッシュ'
-  , profile_fields TEXT not null comment 'プロファイルフィールド'
+  , login_hash VARCHAR(255) default null comment 'ログインハッシュ'
+  , profile_fields TEXT default null comment 'プロファイルフィールド'
   , created_at INT not null comment '作成日時	 UNIXタイムスタンプ'
   , updated_at INT not null comment '更新日時	 UNIXタイムスタンプ'
   , constraint admin_PKC primary key (id)
