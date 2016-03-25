@@ -11,7 +11,7 @@
 		<tr>
 			<th>性別</th>
 			<td>
-				<?php if ($input['sex'] == SEX_MALE) : ?>
+				<?php if ($input['sex'] == Model_Sex::MALE) : ?>
 					男性
 				<?php else: ?>
 					女性

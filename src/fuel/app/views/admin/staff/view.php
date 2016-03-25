@@ -12,7 +12,7 @@
 		<tr>
 			<th>性別</th>
 			<td>
-				<?php if ($staff->sex == SEX_MALE) : ?>
+				<?php if ($staff->sex == Model_Sex::MALE) : ?>
 					男性
 				<?php else: ?>
 					女性

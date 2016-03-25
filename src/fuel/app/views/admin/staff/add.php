@@ -22,9 +22,9 @@
 			<td>
 				<?php
 				echo Form::label('男性', 'sex');
-				echo Form::radio('sex', SEX_MALE, Input::post('sex') == SEX_MALE);
+				echo Form::radio('sex', Model_Sex::MALE, Input::post('sex') == Model_Sex::MALE);
 				echo Form::label('女性', 'sex');
-				echo Form::radio('sex', SEX_FEMALE, Input::post('sex') == SEX_FEMALE);
+				echo Form::radio('sex', Model_Sex::FEMALE, Input::post('sex') == Model_Sex::FEMALE);
 				?>
 			</td>
 		</tr>
