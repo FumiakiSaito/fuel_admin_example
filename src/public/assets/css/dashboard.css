@@ -87,3 +87,7 @@ h3{
 .main .page-header {
   margin-top: 0;
 }
+
+.box {
+  float: left;
+}

@@ -50,7 +50,7 @@ PName=division
 LName=部署
 Comment=
 TableOption=ENGINE=InnoDB CHARACTER SET utf8
-Page=Main
+Page=MAIN
 Left=900
 Top=550
 Field="部署ID","id","*SERIAL","NOT NULL",0,"","",$FFFFFFFF,""
@@ -61,14 +61,14 @@ EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
 ModifiedDateTime=20160318114357
-Position="Main",900,550
+Position="MAIN",900,550
 
 [Entity]
 PName=staff
 LName=社員
 Comment=
 TableOption=ENGINE=InnoDB CHARACTER SET utf8
-Page=Main
+Page=MAIN
 Left=800
 Top=100
 Field="社員ID","id","*SERIAL","NOT NULL",0,"","",$FFFFFFFF,""
@@ -82,7 +82,7 @@ EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
 ModifiedDateTime=20160318114412
-Position="Main",800,100
+Position="MAIN",800,100
 
 [Entity]
 PName=admin

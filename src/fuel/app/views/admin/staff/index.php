@@ -1,7 +1,19 @@
 <?php if ($staffs): ?>
 <h3><i class="glyphicon glyphicon-user"></i>&nbsp;<?php echo $display_title ?></h3>
 <div class='control-label'><?php //echo $pagination;?></div>
-<table class="table table-striped">
+<?php if (Session::get_flash('success')) : ?>
+	<div class="alert alert-success alert-dismissible" role="alert">
+		<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
+		<?php echo Session::get_flash('success'); ?>
+	</div>
+<?php endif?>
+<?php if (Session::get_flash('error')) : ?>
+	<div class="alert alert-danger alert-dismissible" role="alert">
+		<button type="button" class="close" data-dismiss="alert" aria-label="閉じる"><span aria-hidden="true">×</span></button>
+		<?php echo Session::get_flash('error'); ?>
+	</div>
+<?php endif?>
+	<table class="table table-striped">
 	<thead>
 		<tr>
 			<th>ID</th>
@@ -29,5 +41,5 @@
 <p>社員データが存在しません</p>
 <?php endif; ?>
 <p>
-	<?php echo Html::anchor('admin/staff/add', '新規追加', array('class' => 'btn btn-success')); ?>
+	<?php echo Html::anchor('admin/staff/add', '新規追加', array('class' => 'btn btn-default')); ?>
 </p>
