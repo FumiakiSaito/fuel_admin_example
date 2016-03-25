@@ -50,18 +50,18 @@ class Controller_Admin_Staff extends Controller_Admin
 	/**
 	 * 登録確認
 	 */
-	public function action_confirm()
+	public function action_addconfirm()
 	{
 		$val = $this->forge_validation();
 
 		$data = null;
-		$data['divisions'] = $this->_divisions;
 
 		if ($val->run())
 		{
 			$data['display_title'] = '社員登録';
-			$data['input'] = $val->validated();
-			$this->template->content = View::forge('admin/staff/confirm', $data);
+			$this->template->content = View::forge('admin/staff/addconfirm', $data);
+			$this->template->set_global('divisions', $this->_divisions);
+			$this->template->set_global('input',  $val->validated());
 		}
 		else
 		{
@@ -207,18 +207,19 @@ class Controller_Admin_Staff extends Controller_Admin
 		$val = $this->forge_validation();
 
 		$data = null;
-		$data['divisions'] = $this->_divisions;
 
 		if ($val->run())
 		{
 			$data['display_title'] = '社員編集';
-			$data['input'] = $val->validated();
 			$this->template->content = View::forge('admin/staff/editconfirm', $data);
+			$this->template->set_global('divisions', $this->_divisions);
+			$this->template->set_global('input',  $val->validated());
 		}
 		else
 		{
 			$data['display_title'] = '社員編集';
 			$this->template->content = View::forge('admin/staff/edit', $data);
+			$this->template->set_global('data', $data);
 			$this->template->content->set_safe('html_error', $val->show_errors());
 		}
 	}

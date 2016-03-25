@@ -7,7 +7,7 @@
 <?php endif?>
 
 <table class="table table-striped">
-	<?php echo Form::open(array('action' => 'admin/staff/confirm', 'name'=> 'add', 'method'=>'post', 'enctype'=>'multipart/form-data', 'class'=>'form-horizontal')); ?>
+	<?php echo Form::open(array('action' => 'admin/staff/addconfirm', 'name'=> 'add', 'method'=>'post', 'enctype'=>'multipart/form-data', 'class'=>'form-horizontal')); ?>
 	<tbody>
 		<tr>
 			<th><?php echo Form::label('社員番号', 'num'); ?></th>
@@ -22,16 +22,16 @@
 			<td>
 				<?php
 				echo Form::label('男性', 'sex');
-				echo Form::radio('sex', SEX_MALE, true);
+				echo Form::radio('sex', SEX_MALE, Input::post('sex') == SEX_MALE);
 				echo Form::label('女性', 'sex');
-				echo Form::radio('sex', SEX_FEMALE);
+				echo Form::radio('sex', SEX_FEMALE, Input::post('sex') == SEX_FEMALE);
 				?>
 			</td>
 		</tr>
 		<tr>
 			<th><?php echo Form::label('所属部署', 'division_id'); ?></th>
 			<td>
-			<?php echo Form::select('division_id', 'none', $divisions); ?>
+			<?php echo Form::select('division_id', Input::post('division_id'), $divisions); ?>
 			</td>
 		</tr>
 	</tbody>
