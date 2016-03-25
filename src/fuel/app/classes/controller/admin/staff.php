@@ -128,4 +128,21 @@ class Controller_Admin_Staff extends Controller_Admin
 		}
 		Response::redirect('admin/staff/index');
 	}
+
+	/**
+	 * 削除処理
+	 */
+	public function action_delete($id)
+	{
+		$staff = Model_Staff::find($id);
+		if ($staff->delete())
+		{
+			Session::set_flash('success', e('登録しました!'));
+		}
+		else
+		{
+			Session::set_flash('error', e('エラーが発生しました'));
+		}
+		Response::redirect('admin/staff/index');
+	}
 }
